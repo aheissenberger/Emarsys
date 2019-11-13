@@ -385,7 +385,7 @@ class Client
      */
     public function listContactData(array $query)
     {
-        return $this->send(HttpClient::GET, sprintf('contact/query%s', http_build_query($query)));
+        return $this->send(HttpClient::GET, sprintf('contact/query?%s', http_build_query($query)));
 
     }
 
