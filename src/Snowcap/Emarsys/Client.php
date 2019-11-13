@@ -378,6 +378,18 @@ class Client
     }
 
     /**
+     * Returns a list of the values of the specified field as well as the related contact identifiers (id)
+     *
+     * @param array $data
+     * @return Response
+     */
+    public function listContactData(array $query)
+    {
+        return $this->send(HttpClient::GET, sprintf('contact/query%s', http_build_query($query)));
+
+    }
+
+    /**
      * Returns a list of contact lists which can be used as recipient source for the email.
      *
      * @param array $data

@@ -1,0 +1,16 @@
+{
+  "replyCode": 0,
+  "replyText": "OK",
+  "data": {
+    "result": [
+      {
+        "3": "loki@example.com",
+        "id": 3
+      },
+      {
+        "3": "thor@example.com",
+        "id": 5
+      }
+    ]
+  }
+}

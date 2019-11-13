@@ -202,6 +202,16 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expectedData['data']['id'], $response);
     }
 
+	public function testItReturnsListContactData()
+	{
+		$expectedResponse = $this->createExpectedResponse('ListContactData');
+		$this->stubHttpClient->method('send')->willReturn($expectedResponse);
+
+		$response = $this->client->ListContactData(array());
+
+		$this->assertInstanceOf('\Snowcap\Emarsys\Response', $response);
+	}
+
 	public function testItReturnsContactData()
 	{
 		$expectedResponse = $this->createExpectedResponse('getContactData');
